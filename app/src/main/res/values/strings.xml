@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">CricketCounter</string>
+    <string name="singleRunBtnText">SINGLE</string>
+    <string name="twoRunsBtnText">TWO</string>
+    <string name="threeRunsBtnText">THREE</string>
+    <string name="fourRunsBtnText">FOUR</string>
+    <string name="sixRunsBtnText">SIX</string>
+    <string name="wicketBtnText">WICKET</string>
+    <string name="wideBtnText">WIDE</string>
+    <string name="noBallBtnText">NO BALL</string>
+    <string name="dotBallBtnText">DOT BALL</string>
 </resources>
