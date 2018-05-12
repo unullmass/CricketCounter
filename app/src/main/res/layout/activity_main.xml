@@ -64,7 +64,7 @@
                     android:layout_marginBottom="0dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
-                    android:onClick="updateScoreForTeam"
+                    android:onClick="updateDotBallBowled"
                     android:text="@string/dotBallBtnText"
                     android:textSize="10sp" />
 
