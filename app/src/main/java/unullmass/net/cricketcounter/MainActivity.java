@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         t_strikerate.setText("SR: " + String.format("%d", score_A_sr) + "%");
 
         // set the economy
-        score_B_economy = (score_A_runs + score_B_extras) * 100.0 / (score_B_overs / 6.0);
+        score_B_economy = (score_A_runs + score_B_extras) / (score_B_overs / 6.0);
         TextView t_eco = findViewById(R.id.team_b_economy);
         t_eco.setText("Eco: " + String.format("%.2f", score_B_economy));
 

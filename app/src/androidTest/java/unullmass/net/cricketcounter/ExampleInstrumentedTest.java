@@ -23,4 +23,9 @@ public class ExampleInstrumentedTest {
 
         assertEquals("unullmass.net.cricketcounter", appContext.getPackageName());
     }
+
+    @Test
+    public void testScoringMethods() throws Exception {
+
+    }
 }
