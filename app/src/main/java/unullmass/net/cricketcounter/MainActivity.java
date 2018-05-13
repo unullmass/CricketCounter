@@ -99,4 +99,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void resetTeamScores(View view) {
+        score_A_runs = 0;
+        score_A_wkts = 0;
+        score_B_overs = 0;
+        score_B_extras = 0;
+        score_B_economy = 0.0;
+        score_A_sr = 0;
+        updateScoreForTeam();
+
+    }
+
 }
