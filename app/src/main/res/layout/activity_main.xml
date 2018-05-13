@@ -29,7 +29,7 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="sans-serif"
                     android:gravity="center"
-                    android:text="Team A"
+                    android:text="Batting"
                     android:textColor="#616161"
                     android:textSize="14sp" />
 
@@ -45,17 +45,46 @@
                     android:textColor="#000000"
                     android:textSize="40sp" />
 
-                <TextView
-                    android:id="@+id/team_a_extras"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:gravity="center"
-                    android:text="Extras : 0"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/team_a_extras"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_gravity="center"
+                        android:text="Extras : 0"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:background="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/team_a_strikerate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:text="SR : 0%"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
 
                 <Button
                     android:id="@+id/btn_teama_dotball"
@@ -76,7 +105,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginTop="4dp"
-                    android:onClick="updateScoreForTeam"
+                    android:onClick="update1RunScored"
                     android:padding="8dp"
                     android:text="@string/singleRunBtnText"
                     android:textSize="10sp" />
@@ -89,7 +118,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginTop="4dp"
-                    android:onClick="updateScoreForTeam"
+                    android:onClick="update2RunsScored"
                     android:padding="8dp"
                     android:text="@string/twoRunsBtnText"
                     android:textSize="10sp" />
@@ -102,7 +131,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginTop="4dp"
-                    android:onClick="updateScoreForTeam"
+                    android:onClick="update3RunsScored"
                     android:padding="8dp"
                     android:text="@string/threeRunsBtnText"
                     android:textSize="10sp" />
@@ -115,7 +144,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginTop="4dp"
-                    android:onClick="updateScoreForTeam"
+                    android:onClick="update4RunsScored"
                     android:padding="8dp"
                     android:text="@string/fourRunsBtnText"
                     android:textSize="10sp" />
@@ -128,7 +157,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginTop="4dp"
-                    android:onClick="updateScoreForTeam"
+                    android:onClick="update6RunsScored"
                     android:padding="8dp"
                     android:text="@string/sixRunsBtnText"
                     android:textSize="10sp" />
@@ -155,7 +184,7 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="sans-serif"
                     android:gravity="center"
-                    android:text="Team B"
+                    android:text="Bowling"
                     android:textColor="#616161"
                     android:textSize="14sp" />
 
@@ -171,6 +200,27 @@
                     android:textColor="#000000"
                     android:textSize="40sp" />
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/team_b_economy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="4dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_gravity="center"
+                        android:text="Eco : 0.0"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
                 <Button
                     android:id="@+id/btn_teamb_3pts"
                     android:layout_width="match_parent"
@@ -179,7 +229,7 @@
                     android:layout_marginBottom="4dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
-                    android:onClick="updateScoreForTeam"
+                    android:onClick="updateNoBallBowled"
                     android:padding="8dp"
                     android:text="@string/noBallBtnText"
                     android:textSize="10sp" />
@@ -192,7 +242,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginTop="4dp"
-                    android:onClick="updateScoreForTeam"
+                    android:onClick="updateWideBallBowled"
                     android:padding="8dp"
                     android:text="@string/wideBtnText"
                     android:textSize="10sp" />
@@ -206,7 +256,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginTop="4dp"
-                    android:onClick="updateScoreForTeam"
+                    android:onClick="updateWicketTaken"
                     android:padding="8dp"
                     android:text="@string/wicketBtnText"
                     android:textSize="10sp" />
